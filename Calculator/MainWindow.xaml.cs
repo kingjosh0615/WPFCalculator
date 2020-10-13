@@ -95,13 +95,21 @@ namespace Calculator
             }
             else if (number2 != 0)
             {
-
+                 
             }
         }
        
         private void CalcOperatorSubtract_Click(object sender, RoutedEventArgs e)
         {
+            if (number2 == 0)
+            {
+                operatorSign = "-";
+                number1 = Convert.ToDouble(Answer_Box.Text);
+            }
+            else if (operatorSign != "thing")
+            {
 
+            }
         }
 
         private void CalcOperatorMultiply_Click(object sender, RoutedEventArgs e)
