@@ -1,0 +1,79 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid>
+            
+            <!--Grid Columns-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <!--Grid Rows-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <!--Number Buttons-->
+            <Button x:Name="CalcNumberButton1" Content="1" Padding="10" Grid.Row="3" Grid.Column="1" FontSize="32" Click="CalcNumberButton1_Click"/>
+            <Button x:Name="CalcNumberButton2" Content="2" Padding="10" Grid.Row="3" Grid.Column="2" FontSize="32" Click="CalcNumberButton2_Click"/>
+            <Button x:Name="CalcNumberButton3" Content="3" Padding="10" Grid.Row="3" Grid.Column="3" FontSize="32" Click="CalcNumberButton3_Click"/>
+            <Button x:Name="CalcNumberButton4" Content="4" Padding="10" Grid.Row="2" Grid.Column="1" FontSize="32" Click="CalcNumberButton4_Click"/>
+            <Button x:Name="CalcNumberButton5" Content="5" Padding="10" Grid.Row="2" Grid.Column="2" FontSize="32" Click="CalcNumberButton5_Click"/>
+            <Button x:Name="CalcNumberButton6" Content="6" Padding="10" Grid.Row="2" Grid.Column="3" FontSize="32" Click="CalcNumberButton6_Click"/>
+            <Button x:Name="CalcNumberButton7" Content="7" Padding="10" Grid.Row="1" Grid.Column="1" FontSize="32" Click="CalcNumberButton7_Click"/>
+            <Button x:Name="CalcNumberButton8" Content="8" Padding="10" Grid.Row="1" Grid.Column="2" FontSize="32" Click="CalcNumberButton8_Click"/>
+            <Button x:Name="CalcNumberButton9" Content="9" Padding="10" Grid.Row="1" Grid.Column="3" FontSize="32" Click="CalcNumberButton9_Click"/>
+            <Button x:Name="CalcNumberButton0" Content="0" Padding="10" Grid.Row="4" Grid.Column="2" FontSize="32" Click="CalcNumberButton0_Click"/>
+            
+            <!--Operator Buttons-->
+            <Button x:Name="CalcOperatorAdd" Content="+" Padding="10" Grid.Row="1" Grid.Column="4" FontSize="32" Click="CalcOperatorAdd_Click" />
+            <Button x:Name="CalcOperatorSubtract" Content="-" Padding="10" Grid.Row="2" Grid.Column="4" FontSize="32" Click="CalcOperatorSubtract_Click" />
+            <Button x:Name="CalcOperatorMultiply" Content="x" Padding="10" Grid.Row="3" Grid.Column="4" FontSize="32" Click="CalcOperatorMultiply_Click"/>
+            <Button x:Name="CalcOperatorDivide" Content="/" Padding="10" Grid.Row="4" Grid.Column="4" FontSize="32" Click="CalcOperatorDivide_Click"/>
+            
+            <!--Misc Buttons-->
+            <Button x:Name="CalcMiscClearAll" Content="Clear" Padding="10" Grid.Row="1" Grid.Column="0" FontSize="32" Click="CalcMiscClearAll_Click"/>
+            <Button x:Name="CalcMiscSquareRoot" Content="Sqr Root" Padding="10" Grid.Row="2" Grid.Column="0" FontSize="32" Click="CalcMiscSquareRoot_Click"/>
+            <Button x:Name="CalcMiscSquare" Content="^2" Padding="10" Grid.Row="3" Grid.Column="0" FontSize="32" Click="CalcMiscSquare_Click"/>
+            <Button x:Name="CalcMiscExponents" Content="^" Padding="10" Grid.Row="4" Grid.Column="0" FontSize="32" Click="CalcMiscExponents_Click"/>
+            <Button x:Name="CalcMiscNegative" Content="+/-" Padding="10" Grid.Row="4" Grid.Column="1" FontSize="32" Click="CalcMiscNegative_Click"/>
+            <Button x:Name="CalcMiscDecimal" Content="." Padding="10" Grid.Row="4" Grid.Column="3" FontSize="32" Click="CalcMiscDecimal_Click"/>
+            
+        </Grid>
+        
+        <!--Equal Sign and Text Box Grid-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="CalcEqualSign" Content="=" Padding="10" Grid.Row="5" Grid.Column="0" FontSize="32" Click="CalcEqualSign_Click"/>
+            <TextBox x:Name="Answer_Box" Text="0" Padding="10" Grid.Row="0" Grid.Column="0" FontSize="70" HorizontalAlignment="Right" VerticalAlignment="Center" Height="100" Width="800" TextAlignment="Right" />
+        </Grid>
+        
+    </Grid>
+    
+</Window>
