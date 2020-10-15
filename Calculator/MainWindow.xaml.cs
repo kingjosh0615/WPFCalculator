@@ -290,18 +290,28 @@ namespace Calculator
         //Misc Buttons
         private void CalcMiscSquareRoot_Click(object sender, RoutedEventArgs e)
         {
-
+            number1 = Convert.ToDouble(Math.Sqrt(number1));
+            Answer_Box.Text = Convert.ToString(number1);
         }
 
         private void CalcMiscSquare_Click(object sender, RoutedEventArgs e)
         {
-
+            number1 = number1 * number1;
+            Answer_Box.Text = Convert.ToString(number1);
         }
 
         private void CalcMiscExponents_Click(object sender, RoutedEventArgs e)
         {
+            if (number1 != 0)
+            {
+                number2 = Convert.ToDouble(Answer_Box.Text);
 
+            }
+            
+            //PEEPEEPOOPOOPEEPEEPOOPOOPEEPEEPOOPOOPEEPEEPOOPOOPEEPEEPOOPOO
+            
         }
+    
 
         private void CalcMiscNegative_Click(object sender, RoutedEventArgs e)
         {
