@@ -88,38 +88,117 @@ namespace Calculator
         //Common Operators
         private void CalcOperatorAdd_Click(object sender, RoutedEventArgs e)
         {
+            if (number1 != 0)
+            {
+                number2 = Convert.ToDouble(Answer_Box.Text);
+            }
             if (number2 == 0)
             {
-                operatorSign = "+";
-                number1 = Convert.ToDouble(Answer_Box.Text);
+                
+                if (operatorSign != "thing")
+                {
+                    //Answer_Box.Text
+                    operatorSign = "+";
+                    Answer_Box.Text = Convert.ToString(number1);
+
+                }
+                else
+                {
+                    operatorSign = "+";
+                    number1 = Convert.ToDouble(Answer_Box.Text);
+                    Answer_Box.Text = "0";
+                }
+                
             }
             else if (number2 != 0)
             {
-                 
+                solveEquation();
+                number1 = Convert.ToDouble(Answer_Box.Text);
             }
         }
        
         private void CalcOperatorSubtract_Click(object sender, RoutedEventArgs e)
         {
+            if (number1 != 0)
+            {
+                number2 = Convert.ToDouble(Answer_Box.Text);
+            }
             if (number2 == 0)
             {
-                operatorSign = "-";
-                number1 = Convert.ToDouble(Answer_Box.Text);
+                if (operatorSign != "thing")
+                {
+                    operatorSign = "-";
+                    Answer_Box.Text = Convert.ToString(number1 );
+
+                }
+                else
+                {
+                    operatorSign = "-";
+                    number1 = Convert.ToDouble(Answer_Box.Text);
+                    Answer_Box.Text = "0";
+                }
             }
             else if (operatorSign != "thing")
             {
-
+                solveEquation();
+                number1 = Convert.ToDouble(Answer_Box.Text);
             }
         }
 
         private void CalcOperatorMultiply_Click(object sender, RoutedEventArgs e)
         {
+            if (number1 != 0)
+            {
+                number2 = Convert.ToDouble(Answer_Box.Text);
+            }
+            if (number2 == 0)
+            {
+                if (operatorSign != "thing")
+                {
+                    operatorSign = "*";
+                    Answer_Box.Text = Convert.ToString(number1);
 
+                }
+                else
+                {
+                    operatorSign = "*";
+                    number1 = Convert.ToDouble(Answer_Box.Text);
+                    Answer_Box.Text = "0";
+                }
+            }
+            else if (operatorSign != "thing")
+            {
+                solveEquation();
+                number1 = Convert.ToDouble(Answer_Box.Text);
+            }
         }
 
         private void CalcOperatorDivide_Click(object sender, RoutedEventArgs e)
         {
+            if (number1 != 0)
+            {
+                number2 = Convert.ToDouble(Answer_Box.Text);
+            }
+            if (number2 == 0)
+            {
+                if (operatorSign != "thing")
+                {
+                    operatorSign = "/";
+                    Answer_Box.Text = Convert.ToString(number1);
 
+                }
+                else
+                {
+                    operatorSign = "/";
+                    number1 = Convert.ToDouble(Answer_Box.Text);
+                    Answer_Box.Text = "0";
+                }
+            }
+            else if (operatorSign != "thing")
+            {
+                solveEquation();
+                number1 = Convert.ToDouble(Answer_Box.Text);
+            }
         }
         //Misc Buttons
         private void CalcMiscSquareRoot_Click(object sender, RoutedEventArgs e)
@@ -149,7 +228,85 @@ namespace Calculator
         //Equal Sign
         private void CalcEqualSign_Click(object sender, RoutedEventArgs e)
         {
+            if (number1 != 0 && operatorSign == "thing")
+            {
+                Answer_Box.Text = Convert.ToString(number1);
+                ClearVariablesExceptAnswerBox();
 
+
+            }
+            else if (operatorSign != "thing")
+            {
+                number2 = Convert.ToDouble(Answer_Box.Text);
+                if (operatorSign == "+")
+                {
+                    Answer_Box.Text = Convert.ToString(number1 + number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+                else if (operatorSign == "-")
+                {
+                    Answer_Box.Text = Convert.ToString(number1 - number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+                else if (operatorSign == "*")
+                {
+                    Answer_Box.Text = Convert.ToString(number1 * number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+                else if (operatorSign == "/")
+                {
+                    Answer_Box.Text = Convert.ToString(number1 / number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+            }
+        }
+        public void solveEquation()
+        {
+            
+            if (number1 != 0 && operatorSign == "thing")
+            {
+                Answer_Box.Text = Convert.ToString(number1);
+                ClearVariablesExceptAnswerBox();
+
+
+            }
+            else if (operatorSign != "thing")
+            {
+                number2 = Convert.ToDouble(Answer_Box.Text);
+                if (operatorSign == "+")
+                {
+                    Answer_Box.Text = Convert.ToString(number1 + number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+                else if(operatorSign == "-")
+                {
+                    Answer_Box.Text = Convert.ToString(number1 - number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+                else if (operatorSign == "*")
+                {
+                    Answer_Box.Text = Convert.ToString(number1 * number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+                else if (operatorSign == "/")
+                {
+                    Answer_Box.Text = Convert.ToString(number1 / number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+            }
+        }
+        public void ClearVariables()
+        {
+            Answer_Box.Text = "0";
+            number1 = 0;
+            number2 = 0;
+            operatorSign = "thing";
+        }
+        public void ClearVariablesExceptAnswerBox()
+        {
+            number1 = 0;
+            number2 = 0;
+            operatorSign = "thing";
         }
     }
 }
