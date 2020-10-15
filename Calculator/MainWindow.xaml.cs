@@ -38,7 +38,7 @@ namespace Calculator
             {
                 Answer_Box.Text = "0";
                 funnyMakeSure = 0;
-                number2 = 0;
+                //number2 = 0;
             }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 1); 
         }
@@ -175,21 +175,6 @@ namespace Calculator
                 }
                 
             }
-            /*
-            if (number1 != 0 && howManyEquationRuns > 0)
-            {
-                number2 = Convert.ToDouble(Answer_Box.Text);
-                solveEquation();
-                number1 = Convert.ToDouble(Answer_Box.Text);
-                if (operatorSign != "thing")
-                {
-
-                    operatorSign = "+";
-                    Answer_Box.Text = Convert.ToString(number1);
-
-                }
-            }
-            */
             if (number2 != 0)
             {
                 solveEquation();
@@ -290,6 +275,7 @@ namespace Calculator
         //Misc Buttons
         private void CalcMiscSquareRoot_Click(object sender, RoutedEventArgs e)
         {
+            number1 = Convert.ToDouble(Answer_Box.Text);
             number1 = Convert.ToDouble(Math.Sqrt(number1));
             Answer_Box.Text = Convert.ToString(number1);
         }
@@ -308,7 +294,7 @@ namespace Calculator
 
             }
             
-            //PEEPEEPOOPOOPEEPEEPOOPOOPEEPEEPOOPOOPEEPEEPOOPOOPEEPEEPOOPOO
+         
             
         }
     

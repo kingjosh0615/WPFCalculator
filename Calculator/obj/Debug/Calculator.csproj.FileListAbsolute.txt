@@ -28,3 +28,18 @@ C:\Users\WILES_JOSHUA\source\repos\WPFCalculator\Calculator\obj\Debug\Calculator
 C:\Users\WILES_JOSHUA\source\repos\WPFCalculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\WILES_JOSHUA\source\repos\WPFCalculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\WILES_JOSHUA\source\repos\WPFCalculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\MainWindow.g.cs
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\App.g.cs
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator_MarkupCompile.cache
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator_MarkupCompile.lref
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\MainWindow.baml
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator.g.resources
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\Josh\Documents\School Stuff 2020-2021\C# Stuff\WPFCalculator\Calculator\obj\Debug\Calculator.pdb
