@@ -24,6 +24,7 @@ namespace Calculator
         public static double number2 = 0;
         public static string operatorSign = "thing";
         public static int funnyMakeSure = 0;
+        //public static int howManyEquationRuns = 0;
            
         public MainWindow()
         {
@@ -163,6 +164,7 @@ namespace Calculator
                     
                     operatorSign = "+";
                     Answer_Box.Text = Convert.ToString(number1);
+
                     
                 }
                 else
@@ -173,6 +175,21 @@ namespace Calculator
                 }
                 
             }
+            /*
+            if (number1 != 0 && howManyEquationRuns > 0)
+            {
+                number2 = Convert.ToDouble(Answer_Box.Text);
+                solveEquation();
+                number1 = Convert.ToDouble(Answer_Box.Text);
+                if (operatorSign != "thing")
+                {
+
+                    operatorSign = "+";
+                    Answer_Box.Text = Convert.ToString(number1);
+
+                }
+            }
+            */
             if (number2 != 0)
             {
                 solveEquation();
@@ -330,6 +347,7 @@ namespace Calculator
                 }
             }
             funnyMakeSure = 1;
+            //howManyEquationRuns++;
         }
         public void solveEquation()
         {
@@ -366,6 +384,7 @@ namespace Calculator
                 }
             }
             funnyMakeSure = 1;
+            //howManyEquationRuns ++;
         }
         public void ClearVariables()
         {
@@ -373,12 +392,14 @@ namespace Calculator
             number1 = 0;
             number2 = 0;
             operatorSign = "thing";
+            //howManyEquationRuns++;
         }
         public void ClearVariablesExceptAnswerBox()
         {
             number1 = 0;
             number2 = 0;
             operatorSign = "thing";
+            
         }
         
     }
