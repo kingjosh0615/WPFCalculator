@@ -24,6 +24,7 @@ namespace Calculator
         public static double number2 = 0;
         public static string operatorSign = "thing";
         public static int funnyMakeSure = 0;
+        public static int funnyMakeSure2 = 0;
         //public static int howManyEquationRuns = 0;
            
         public MainWindow()
@@ -38,7 +39,7 @@ namespace Calculator
             {
                 Answer_Box.Text = "0";
                 funnyMakeSure = 0;
-                //number2 = 0;
+                number2 = 0;
             }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 1); 
         }
@@ -191,85 +192,124 @@ namespace Calculator
        
         private void CalcOperatorSubtract_Click(object sender, RoutedEventArgs e)
         {
-            if (number1 != 0)
             {
-                number2 = Convert.ToDouble(Answer_Box.Text);
-            }
-            if (number2 == 0)
-            {
-                if (operatorSign != "thing")
+                if (number1 != 0)
                 {
-                    operatorSign = "-";
-                    Answer_Box.Text = Convert.ToString(number1);
+                    number2 = Convert.ToDouble(Answer_Box.Text);
+                }
+                if (number2 == 0)
+                {
+
+                    if (operatorSign != "thing")
+                    {
+
+                        operatorSign = "-";
+                        Answer_Box.Text = Convert.ToString(number1);
+
+
+                    }
+                    else
+                    {
+                        operatorSign = "-";
+                        number1 = Convert.ToDouble(Answer_Box.Text);
+                        Answer_Box.Text = "0";
+                    }
 
                 }
-                else
+                if (number2 != 0)
                 {
-                    operatorSign = "-";
+                    solveEquation();
                     number1 = Convert.ToDouble(Answer_Box.Text);
-                    Answer_Box.Text = "0";
+                    if (operatorSign != "thing")
+                    {
+
+                        operatorSign = "-";
+                        Answer_Box.Text = Convert.ToString(number1);
+
+                    }
                 }
-            }
-            else if (operatorSign != "thing")
-            {
-                solveEquation();
-                number1 = Convert.ToDouble(Answer_Box.Text);
             }
         }
 
         private void CalcOperatorMultiply_Click(object sender, RoutedEventArgs e)
         {
-            if (number1 != 0)
             {
-                number2 = Convert.ToDouble(Answer_Box.Text);
-            }
-            if (number2 == 0)
-            {
-                if (operatorSign != "thing")
+                if (number1 != 0)
                 {
-                    operatorSign = "*";
-                    Answer_Box.Text = Convert.ToString(number1);
+                    number2 = Convert.ToDouble(Answer_Box.Text);
+                }
+                if (number2 == 0)
+                {
+
+                    if (operatorSign != "thing")
+                    {
+
+                        operatorSign = "*";
+                        Answer_Box.Text = Convert.ToString(number1);
+
+
+                    }
+                    else
+                    {
+                        operatorSign = "*";
+                        number1 = Convert.ToDouble(Answer_Box.Text);
+                        Answer_Box.Text = "0";
+                    }
 
                 }
-                else
+                if (number2 != 0)
                 {
-                    operatorSign = "*";
+                    solveEquation();
                     number1 = Convert.ToDouble(Answer_Box.Text);
-                    Answer_Box.Text = "0";
+                    if (operatorSign != "thing")
+                    {
+
+                        operatorSign = "*";
+                        Answer_Box.Text = Convert.ToString(number1);
+
+                    }
                 }
-            }
-            else if (operatorSign != "thing")
-            {
-                solveEquation();
-                number1 = Convert.ToDouble(Answer_Box.Text);
             }
         }
 
         private void CalcOperatorDivide_Click(object sender, RoutedEventArgs e)
         {
-            if (number1 != 0)
             {
-                number2 = Convert.ToDouble(Answer_Box.Text);
-            }
-            if (number2 == 0)
-            {
-                if (operatorSign != "thing")
+                if (number1 != 0)
                 {
-                    operatorSign = "/";
-                    Answer_Box.Text = Convert.ToString(number1);
+                    number2 = Convert.ToDouble(Answer_Box.Text);
+                }
+                if (number2 == 0)
+                {
+
+                    if (operatorSign != "thing")
+                    {
+
+                        operatorSign = "/";
+                        Answer_Box.Text = Convert.ToString(number1);
+
+
+                    }
+                    else
+                    {
+                        operatorSign = "/";
+                        number1 = Convert.ToDouble(Answer_Box.Text);
+                        Answer_Box.Text = "0";
+                    }
 
                 }
-                else
+                if (number2 != 0)
                 {
-                    operatorSign = "/";
+                    solveEquation();
                     number1 = Convert.ToDouble(Answer_Box.Text);
-                    Answer_Box.Text = "0";
+                    if (operatorSign != "thing")
+                    {
+
+                        operatorSign = "/";
+                        Answer_Box.Text = Convert.ToString(number1);
+
+                    }
                 }
-            }
-            else if (operatorSign != "thing")
-            {
-                solveEquation();
-                number1 = Convert.ToDouble(Answer_Box.Text);
             }
         }
         //Misc Buttons
@@ -343,6 +383,7 @@ namespace Calculator
                 }
             }
             funnyMakeSure = 1;
+            funnyMakeSure2 = 1;
             //howManyEquationRuns++;
         }
         public void solveEquation()
@@ -380,6 +421,7 @@ namespace Calculator
                 }
             }
             funnyMakeSure = 1;
+            funnyMakeSure2 = 1;
             //howManyEquationRuns ++;
         }
         public void ClearVariables()
