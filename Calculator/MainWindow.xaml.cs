@@ -23,58 +23,121 @@ namespace Calculator
         public static double number1 = 0;
         public static double number2 = 0;
         public static string operatorSign = "thing";
+        public static int funnyMakeSure = 0;
+           
         public MainWindow()
         {
             InitializeComponent();
+            
         }
         //Number Buttons
         private void CalcNumberButton1_Click(object sender, RoutedEventArgs e)
         {
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 1);
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
+            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 1); 
         }
 
         private void CalcNumberButton2_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 2);
         }
 
         private void CalcNumberButton3_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 3);
         }
 
         private void CalcNumberButton4_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 4);
         }
 
         private void CalcNumberButton5_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 5);
         }
 
         private void CalcNumberButton6_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 6);
         }
 
         private void CalcNumberButton7_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 7);
         }
 
         private void CalcNumberButton8_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 8);
         }
 
         private void CalcNumberButton9_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 9);
         }
 
         private void CalcNumberButton0_Click(object sender, RoutedEventArgs e)
         {
+            if (funnyMakeSure == 1)
+            {
+                Answer_Box.Text = "0";
+                funnyMakeSure = 0;
+                number2 = 0;
+            }
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10));
         }
         //Clear All
@@ -97,10 +160,10 @@ namespace Calculator
                 
                 if (operatorSign != "thing")
                 {
-                    //Answer_Box.Text
+                    
                     operatorSign = "+";
                     Answer_Box.Text = Convert.ToString(number1);
-
+                    
                 }
                 else
                 {
@@ -110,10 +173,17 @@ namespace Calculator
                 }
                 
             }
-            else if (number2 != 0)
+            if (number2 != 0)
             {
                 solveEquation();
                 number1 = Convert.ToDouble(Answer_Box.Text);
+                if (operatorSign != "thing")
+                {
+
+                    operatorSign = "+";
+                    Answer_Box.Text = Convert.ToString(number1);
+
+                }
             }
         }
        
@@ -128,7 +198,7 @@ namespace Calculator
                 if (operatorSign != "thing")
                 {
                     operatorSign = "-";
-                    Answer_Box.Text = Convert.ToString(number1 );
+                    Answer_Box.Text = Convert.ToString(number1);
 
                 }
                 else
@@ -259,6 +329,7 @@ namespace Calculator
                     ClearVariablesExceptAnswerBox();
                 }
             }
+            funnyMakeSure = 1;
         }
         public void solveEquation()
         {
@@ -294,6 +365,7 @@ namespace Calculator
                     ClearVariablesExceptAnswerBox();
                 }
             }
+            funnyMakeSure = 1;
         }
         public void ClearVariables()
         {
@@ -308,5 +380,6 @@ namespace Calculator
             number2 = 0;
             operatorSign = "thing";
         }
+        
     }
 }
