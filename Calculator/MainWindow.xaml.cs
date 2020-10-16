@@ -160,7 +160,7 @@ namespace Calculator
             if (number2 == 0)
             {
                 
-                if (operatorSign != "thing")
+                if (operatorSign != "thing" && number2 == 0)
                 {
                     
                     operatorSign = "+";
@@ -200,7 +200,7 @@ namespace Calculator
                 if (number2 == 0)
                 {
 
-                    if (operatorSign != "thing")
+                    if (operatorSign != "thing" && number2 == 0)
                     {
 
                         operatorSign = "-";
@@ -241,7 +241,7 @@ namespace Calculator
                 if (number2 == 0)
                 {
 
-                    if (operatorSign != "thing")
+                    if (operatorSign != "thing" && number2 == 0)
                     {
 
                         operatorSign = "*";
@@ -282,7 +282,7 @@ namespace Calculator
                 if (number2 == 0)
                 {
 
-                    if (operatorSign != "thing")
+                    if (operatorSign != "thing" && number2 == 0)
                     {
 
                         operatorSign = "/";
@@ -318,12 +318,15 @@ namespace Calculator
             number1 = Convert.ToDouble(Answer_Box.Text);
             number1 = Convert.ToDouble(Math.Sqrt(number1));
             Answer_Box.Text = Convert.ToString(number1);
+            number1 = 0;
         }
 
         private void CalcMiscSquare_Click(object sender, RoutedEventArgs e)
         {
+            number1 = Convert.ToDouble(Answer_Box.Text);
             number1 = number1 * number1;
             Answer_Box.Text = Convert.ToString(number1);
+            number1 = 0;
         }
 
         private void CalcMiscExponents_Click(object sender, RoutedEventArgs e)
@@ -331,17 +334,17 @@ namespace Calculator
             if (number1 != 0)
             {
                 number2 = Convert.ToDouble(Answer_Box.Text);
-
+                number1 = Math.Pow(number1, number2);
+                Answer_Box.Text = Convert.ToString(number1);
+                number1 = 0;
+                number2 = 0;
             }
-            
-         
-            
         }
     
 
         private void CalcMiscNegative_Click(object sender, RoutedEventArgs e)
         {
-
+                Answer_Box.Text = Convert.ToString(Convert.ToDouble(Answer_Box.Text) * -1);
         }
 
         private void CalcMiscDecimal_Click(object sender, RoutedEventArgs e)
