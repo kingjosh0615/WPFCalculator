@@ -41,6 +41,7 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
+            
             Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 1); 
         }
 
@@ -371,11 +372,11 @@ namespace Calculator
 
         private void CalcMiscNegative_Click(object sender, RoutedEventArgs e)
         {
-                Answer_Box.Text = Convert.ToString(Convert.ToDouble(Answer_Box.Text) * -1);
+            Answer_Box.Text = Convert.ToString(Convert.ToDouble(Answer_Box.Text) * -1);
         }
         private void CalcMiscDecimal_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
         //Equal Sign
         private void CalcEqualSign_Click(object sender, RoutedEventArgs e)
