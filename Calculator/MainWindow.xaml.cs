@@ -331,14 +331,24 @@ namespace Calculator
 
         private void CalcMiscExponents_Click(object sender, RoutedEventArgs e)
         {
+            operatorSign = "^";
+            if (number1 == 0)
+            {
+                number1 = Convert.ToDouble(Answer_Box.Text);
+                number2 = 0;
+                Answer_Box.Text = "0";
+            }
+            /*
             if (number1 != 0)
             {
+                
                 number2 = Convert.ToDouble(Answer_Box.Text);
                 number1 = Math.Pow(number1, number2);
                 Answer_Box.Text = Convert.ToString(number1);
                 number1 = 0;
                 number2 = 0;
             }
+            */
         }
     
 
@@ -384,6 +394,11 @@ namespace Calculator
                     Answer_Box.Text = Convert.ToString(number1 / number2);
                     ClearVariablesExceptAnswerBox();
                 }
+                else if (operatorSign == "^")
+                {
+                    Answer_Box.Text = Convert.ToString(Math.Pow(number1, number2));
+                    ClearVariablesExceptAnswerBox();
+                }
             }
             funnyMakeSure = 1;
             funnyMakeSure2 = 1;
@@ -420,6 +435,11 @@ namespace Calculator
                 else if (operatorSign == "/")
                 {
                     Answer_Box.Text = Convert.ToString(number1 / number2);
+                    ClearVariablesExceptAnswerBox();
+                }
+                else if (operatorSign == "^")
+                {
+                    Answer_Box.Text = Convert.ToString(Math.Pow(number1, number2));
                     ClearVariablesExceptAnswerBox();
                 }
             }
