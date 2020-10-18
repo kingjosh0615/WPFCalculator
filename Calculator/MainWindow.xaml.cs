@@ -192,7 +192,7 @@ namespace Calculator
        
         private void CalcOperatorSubtract_Click(object sender, RoutedEventArgs e)
         {
-            {
+            
                 if (number1 != 0)
                 {
                     number2 = Convert.ToDouble(Answer_Box.Text);
@@ -228,12 +228,12 @@ namespace Calculator
 
                     }
                 }
-            }
+            
         }
 
         private void CalcOperatorMultiply_Click(object sender, RoutedEventArgs e)
         {
-            {
+            
                 if (number1 != 0)
                 {
                     number2 = Convert.ToDouble(Answer_Box.Text);
@@ -269,12 +269,12 @@ namespace Calculator
 
                     }
                 }
-            }
+            
         }
 
         private void CalcOperatorDivide_Click(object sender, RoutedEventArgs e)
         {
-            {
+            
                 if (number1 != 0)
                 {
                     number2 = Convert.ToDouble(Answer_Box.Text);
@@ -310,7 +310,7 @@ namespace Calculator
 
                     }
                 }
-            }
+            
         }
         //Misc Buttons
         private void CalcMiscSquareRoot_Click(object sender, RoutedEventArgs e)
@@ -331,24 +331,41 @@ namespace Calculator
 
         private void CalcMiscExponents_Click(object sender, RoutedEventArgs e)
         {
-            operatorSign = "^";
-            if (number1 == 0)
-            {
-                number1 = Convert.ToDouble(Answer_Box.Text);
-                number2 = 0;
-                Answer_Box.Text = "0";
-            }
-            /*
             if (number1 != 0)
             {
-                
                 number2 = Convert.ToDouble(Answer_Box.Text);
-                number1 = Math.Pow(number1, number2);
-                Answer_Box.Text = Convert.ToString(number1);
-                number1 = 0;
-                number2 = 0;
             }
-            */
+            if (number2 == 0)
+            {
+
+                if (operatorSign != "thing" && number2 == 0)
+                {
+
+                    operatorSign = "^";
+                    Answer_Box.Text = Convert.ToString(number1);
+
+
+                }
+                else
+                {
+                    operatorSign = "^";
+                    number1 = Convert.ToDouble(Answer_Box.Text);
+                    Answer_Box.Text = "0";
+                }
+
+            }
+            if (number2 != 0)
+            {
+                solveEquation();
+                number1 = Convert.ToDouble(Answer_Box.Text);
+                if (operatorSign != "thing")
+                {
+
+                    operatorSign = "^";
+                    Answer_Box.Text = Convert.ToString(number1);
+
+                }
+            }
         }
     
 
@@ -356,7 +373,6 @@ namespace Calculator
         {
                 Answer_Box.Text = Convert.ToString(Convert.ToDouble(Answer_Box.Text) * -1);
         }
-
         private void CalcMiscDecimal_Click(object sender, RoutedEventArgs e)
         {
 
