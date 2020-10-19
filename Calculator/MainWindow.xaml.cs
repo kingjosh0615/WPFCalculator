@@ -41,8 +41,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 1); 
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "1";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 1);
+            }
         }
 
         private void CalcNumberButton2_Click(object sender, RoutedEventArgs e)
@@ -53,7 +60,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 2);
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "2";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 2);
+            }
         }
 
         private void CalcNumberButton3_Click(object sender, RoutedEventArgs e)
@@ -64,7 +79,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 3);
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "3";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 3);
+            }
         }
 
         private void CalcNumberButton4_Click(object sender, RoutedEventArgs e)
@@ -75,7 +98,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 4);
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "4";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 4);
+            }
         }
 
         private void CalcNumberButton5_Click(object sender, RoutedEventArgs e)
@@ -86,7 +117,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 5);
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "5";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 5);
+            }
         }
 
         private void CalcNumberButton6_Click(object sender, RoutedEventArgs e)
@@ -97,7 +136,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 6);
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "6";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 6);
+            }
         }
 
         private void CalcNumberButton7_Click(object sender, RoutedEventArgs e)
@@ -108,7 +155,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 7);
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "7";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 7);
+            }
         }
 
         private void CalcNumberButton8_Click(object sender, RoutedEventArgs e)
@@ -119,7 +174,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 8);
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "8";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 8);
+            }
         }
 
         private void CalcNumberButton9_Click(object sender, RoutedEventArgs e)
@@ -130,7 +193,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 9);
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "9";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10) + 9);
+            }
         }
 
         private void CalcNumberButton0_Click(object sender, RoutedEventArgs e)
@@ -141,7 +212,15 @@ namespace Calculator
                 funnyMakeSure = 0;
                 number2 = 0;
             }
-            Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10));
+            if (Answer_Box.Text.Contains("."))
+            {
+                Answer_Box.Text = Answer_Box.Text + "0";
+
+            }
+            else
+            {
+                Answer_Box.Text = Convert.ToString((Convert.ToDouble(Answer_Box.Text) * 10));
+            }
         }
         //Clear All
         private void CalcMiscClearAll_Click(object sender, RoutedEventArgs e)
@@ -376,7 +455,11 @@ namespace Calculator
         }
         private void CalcMiscDecimal_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (Convert.ToDouble(Answer_Box.Text) % 1 == 0)
+            {
+                Answer_Box.Text = Answer_Box.Text + ".";
+
+            }
         }
         //Equal Sign
         private void CalcEqualSign_Click(object sender, RoutedEventArgs e)
