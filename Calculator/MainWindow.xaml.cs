@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace Calculator
 {
@@ -26,7 +27,7 @@ namespace Calculator
         public static int funnyMakeSure = 0;
         public static int funnyMakeSure2 = 0;
         //public static int howManyEquationRuns = 0;
-           
+        private MediaPlayer mediaPlayer = new MediaPlayer();
         public MainWindow()
         {
             InitializeComponent();
@@ -229,6 +230,7 @@ namespace Calculator
             number1 = 0;
             number2 = 0;
             operatorSign = "thing";
+            mediaElement1.Stop();
         }
         //Common Operators
         private void CalcOperatorAdd_Click(object sender, RoutedEventArgs e)
@@ -503,6 +505,12 @@ namespace Calculator
             funnyMakeSure = 1;
             funnyMakeSure2 = 1;
             //howManyEquationRuns++;
+            if(Answer_Box.Text == "8008" || Answer_Box.Text == "80085" || Answer_Box.Text == "58008")
+            {
+                mediaElement1.Source = new Uri("C:/Users/WILES_JOSHUA/source/repos/WPFCalculator/Calculator/bin/Debug/Moekia.mp3");
+                mediaElement1.Play();
+                System.Diagnostics.Process.Start("");
+            }
         }
         public void solveEquation()
         {

@@ -70,6 +70,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+            <MediaElement Height="120" Margin="10,10,108,0" LoadedBehavior="Manual" Name="mediaElement1" VerticalAlignment="Top" />
             <Button x:Name="CalcEqualSign" Content="=" Padding="10" Grid.Row="5" Grid.Column="0" FontSize="32" Click="CalcEqualSign_Click"/>
             <TextBox x:Name="Answer_Box" Text="0" Padding="10" Grid.Row="0" Grid.Column="0" FontSize="70" HorizontalAlignment="Right" VerticalAlignment="Center" Height="100" Width="800" TextAlignment="Right" />
         </Grid>
