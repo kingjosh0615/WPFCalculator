@@ -509,7 +509,7 @@ namespace Calculator
             {
                 mediaElement1.Source = new Uri("C:/Users/WILES_JOSHUA/source/repos/WPFCalculator/Calculator/bin/Debug/Moekia.mp3");
                 mediaElement1.Play();
-                System.Diagnostics.Process.Start("");
+                System.Diagnostics.Process.Start("https://cdn.discordapp.com/attachments/614585871576072213/768894982094323722/morshufast1080.gif");
             }
         }
         public void solveEquation()
